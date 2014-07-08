@@ -72,7 +72,18 @@ function shuffleArray(array) {
 	//create a play function
 		//compare the cards
 		//give the winner both cards (at end of deck)
-	function play(){
+		function play() {
+		var winning_card = war(cards_player_1[0], cards_player_2[0]);
+		var winner;
+		var loser;
+		if (winning_card) {
+			winner = winning_card == cards_player_1[0] ? cards_player_1 : cards_player_2;
+			var loser = winner == cards_player_1 ? cards_player_2 : cards_player_1;
+			var lost_card = loser.shift();
+			winner.push(lost_card);
+			//move card to back
+			winner.push(winner.shift());
+		}
 		
 
 		//this function (defined below) will continue to the next turn
