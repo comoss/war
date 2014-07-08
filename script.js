@@ -73,19 +73,7 @@ function shuffleArray(array) {
 		//compare the cards
 		//give the winner both cards (at end of deck)
 	function play(){
-		var card1 = cards_player_1.shift();
-		var card2 = cards_player_2.shift();
-
-		war(card1, card2); 
 		
-		/*if (card1 > card2) {
-			cards_player_1.unshift()
-			cards_player_2.unshift()
-		} else if (card2 > card1){
-			cards_player_1.unshift()
-			cards_player_2.unshift()
-		} */
-	
 
 		//this function (defined below) will continue to the next turn
 		advance();
